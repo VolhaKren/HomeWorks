@@ -1,5 +1,5 @@
 ﻿// Task 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
+/*
 Console.WriteLine("Input a five-digit number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -8,10 +8,12 @@ Console.WriteLine(result);
 
 bool Palindrome(int number)
 {
-    int number;
-    int i = 0;
-
-    if(number == 6 || number == 7)
+    int first = number / 10000;
+    int second = number % 10000 / 1000;
+    int fourth = number % 100 / 10;
+    int fifth = number % 10;
+    
+    if(first == fifth && second == fourth)
     {
         return true;
     }
@@ -20,7 +22,7 @@ bool Palindrome(int number)
         return false;
     }
 }
-
+*/
 
 // Task 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
