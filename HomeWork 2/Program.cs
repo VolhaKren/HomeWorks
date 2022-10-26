@@ -20,20 +20,21 @@ Console.WriteLine($"The second number of number {num} is {result}");
 int ThirdNumber (int number)
 {
     int i = 0;
-    int third = 0;
+    int third = number / 100 % 10;
 
-    while(i >= 1000)
+    if(i < 100)
+    {
+        Console.WriteLine("The third number is absent.");
+    }
+    else if(i >= 100 && i < 1000)
     {
         third = number % 10;
+    }
+    else
+    { 
+        while(i > 1000)
+        third = number % 10;
         i = i-1;
-        if(i < 100)
-        {
-            Console.WriteLine("The third number is absent.");
-        }
-        else
-        {
-            third = number % 10;
-        }
     }
     return third;
 }
